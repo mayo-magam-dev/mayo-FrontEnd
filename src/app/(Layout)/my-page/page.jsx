@@ -3,6 +3,8 @@ import styles from '@/app/(Layout)/my-page/page.module.scss';
 import Link from 'next/link';
 import { getAuth, signOut } from 'firebase/auth';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
+import ROUTE from '@/constants/route';
 
 export default function MainPage() {
   const router = useRouter();
@@ -20,6 +22,21 @@ export default function MainPage() {
       alert('로그아웃 중 오류가 발생했습니다.');
     }
   };
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    const storeId = localStorage.getItem('storeId');
+
+    if (!token) {
+      alert('로그인 정보가 없습니다. 다시 로그인해주세요');
+      return router.push(ROUTE.HOME);
+    }
+
+    if (!storeId) {
+      alert('가게 정보가 없습니다. 다시 로그인해주세요');
+      return router.push(ROUTE.HOME);
+    }
+  }, [router]);
 
   return (
     <div className={styles.buttonGrid}>
