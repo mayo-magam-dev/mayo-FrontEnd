@@ -12,6 +12,9 @@ export default function MainPage() {
       const auth = getAuth();
       await signOut(auth);
       alert('로그아웃 되었습니다.');
+      localStorage.removeItem('token');
+      localStorage.removeItem('alarm');
+      localStorage.removeItem('storeId');
       router.push('/');
     } catch (e) {
       alert('로그아웃 중 오류가 발생했습니다.');
