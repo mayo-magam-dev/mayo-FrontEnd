@@ -44,7 +44,7 @@ export default function NewOrder() {
             />
           ))
         ) : (
-          <p className={cn('noNewOrder')}>신규주문건이 없습니다</p>
+          <p className={cn('noNewOrder')}>신규 주문 건이 없습니다</p>
         )}
       </div>
     </div>

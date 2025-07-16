@@ -49,7 +49,7 @@ export default function Header() {
     <header className={cn('container')}>
       <div className={cn('businessStatusBox')}>
         <div className={cn('businessStatus', { open: data?.openState })}></div>
-        <p>{data?.openState ? '영업중' : '영업전'}</p>
+        <p>{data?.openState ? '영업 중' : '영업 전'}</p>
       </div>
       <p className={cn('date')}>{currentDateTime}</p>
     </header>

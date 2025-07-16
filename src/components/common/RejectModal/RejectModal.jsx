@@ -19,7 +19,7 @@ export default function RejectModal({ onClick, className }) {
           <p className={cn('title')}>주문거절</p>
           <div className={cn('hr')}></div>
           <div className={cn('contentBox')}>
-            <p className={cn('content')}>주문 거절 사유를 선택해주세요.</p>
+            <p className={cn('content')}>주문 거절 사유를 선택해 주세요.</p>
             <div className={cn('buttonBox')}>
               <button className={cn('button')}>재고소진</button>
               <button className={cn('button')}>영업종료</button>

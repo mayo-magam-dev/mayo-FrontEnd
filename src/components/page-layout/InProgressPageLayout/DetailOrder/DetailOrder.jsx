@@ -121,7 +121,7 @@ export default function DetailOrder() {
               <div className={cn('rightDetailInfoBox')}>
                 <div className={cn('statusBox')}>
                   <p className={cn('title')}>
-                    {orderStatus === 'new' ? '신규 주문입니다!' : '주문이 수락되어 진행중입니다!'}
+                    {orderStatus === 'new' ? '신규 주문입니다!' : '주문이 수락되어 진행 중입니다!'}
                   </p>
                   <p className={cn('name')}>{data?.userNickName}(닉네임)</p>
                 </div>
@@ -179,7 +179,7 @@ export default function DetailOrder() {
         </>
       ) : (
         <div className={cn('noOrderContainer')}>
-          <p className={cn('noOrder')}>주문을 클릭해주세요</p>
+          <p className={cn('noOrder')}>주문을 클릭해 주세요.</p>
         </div>
       )}
     </>
